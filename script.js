@@ -75,7 +75,7 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
     const urlBlob = URL.createObjectURL(blob);
     const downloadLink = document.getElementById("downloadLink");
     downloadLink.href = urlBlob;
-    downloadLink.download = `${branch} ${subject} Front Page - ${name}.pdf`;
+    downloadLink.download = `${subject} - ${name}.pdf`;
     downloadLink.style.display = "block";
     downloadLink.innerText = "Download PDF";
 });
