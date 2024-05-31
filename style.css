@@ -1,0 +1,140 @@
+body {
+    font-family: Georgia, Times, "Times New Roman", serif;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+.main-container {
+    height: 100vh;
+    width: 100%;
+    margin: 10px;
+}
+
+.container {
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #e6e6fa;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+h1 {
+    font-family: inherit;
+    font-size: x-large;
+    font-weight: 600;
+    background-color: #f5f5f5;
+    color: #0c0c0b;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 3px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+h2 {
+    border: 2px solid;
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 10px;
+    padding: 10px;
+    color: #333333;
+    background-color: #ffffff;
+    display: inline-block;
+}
+
+select {
+    font-family: inherit;
+    font-size: larger;
+    font-weight: 700;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input {
+    font-family: inherit;
+    font-size: larger;
+    font-weight: 700;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    background-color: white;
+}
+
+button {
+    font-family: inherit;
+    font-size: x-large;
+    font-weight: 500;
+    background-color: #333333;
+    color: white;
+    padding: 10px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#downloadLink {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 20px 20px;
+    background-color: #007bff;
+    font-size: x-large;
+    font-weight: 500;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    align-self: center;
+}
+
+p {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.social-link {
+    text-decoration: none;
+}
+
+i {
+    font-size: xx-large;
+    margin: 5px;
+    text-decoration: none;
+    border: none;
+}

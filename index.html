@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="30" />
+    <meta name="author" content="Hardik Srivastava" />
+    <meta name="description"
+        content="A Simple Front Page Generator which generates front pages based on the selection of branch & subjects, takes input name by student, and provides a link to download the front page." />
+    <meta name="keywords"
+        content="Front Page Generator, branch selection, subject selection, student name input, download front page, generate front pages, academic front page generator, Feroze Gandhi Polytechnic, Computer Science and Engineering, Information Technology, FGP" />
+
+    <title>Front Page Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <video autoplay loop muted class="background-video">
+        <source src="bg.mp4" type="video/mp4" />
+    </video>
+
+    <div class="main-container">
+        <div class="container">
+            <h1>Front Page Generator</h1>
+
+            <h2>
+                Feroze Gandhi Polytechnic <br />
+                2nd Year - 4th Semester
+            </h2>
+
+            <select name="branch" id="branch">
+                <option value="select">Select Branch</option>
+                <option value="CS">Computer Science & Engineering</option>
+                <option value="IT">Information Technology</option>
+            </select>
+
+            <select name="subjects" id="subjects">
+                <option value="select">Select Subject</option>
+                <option value="OS">Operating System</option>
+                <option value="ECDM">E - Commerce and Digital Marketing</option>
+                <option value="DBMS">Database Management System</option>
+                <option value="UHV">Universal Human Values</option>
+                <option value="OOP Using Java">OOP Using Java</option>
+                <option value="CS II">Communication Skill - II</option>
+                <option value="All In One">All in One</option>
+            </select>
+
+            <input type="text" id="nameInput" placeholder="Enter Your Name" />
+
+            <button id="generateBtn">Generate Front Page</button>
+
+            <a id="downloadLink" style="display: none">Download Front Page</a>
+            <br />
+
+            <footer>
+                <p>Developed with ❤️ by Hardik Srivastava</p>
+
+                <div class="social">
+                    <a href="https://www.linkedin.com/in/codewithhardik" class="social-link">
+                        <i class="fa-brands fa-linkedin" style="color: black"></i>
+                    </a>
+
+                    <a href="https://github.com/Hardik-Techie" class="social-link">
+                        <i class="fa-brands fa-square-github" style="color: black"></i>
+                    </a>
+
+                    <a href="https://www.instagram.com/hardikksrivastava/" class="social-link">
+                        <i class="fa-brands fa-square-instagram" style="color: black"></i>
+                    </a>
+
+                    <a href="https://twitter.com/hardikfgp" class="social-link">
+                        <i class="fa-brands fa-x-twitter" style="color: black"></i>
+                    </a>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
