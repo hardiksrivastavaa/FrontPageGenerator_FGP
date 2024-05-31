@@ -83,18 +83,5 @@ document.getElementById("generateBtn").addEventListener("click", async () => {
 document.getElementById("subjects").addEventListener("change", () => {
     const downloadLink = document.getElementById("downloadLink");
     downloadLink.style.display = "none";
-
-    // Clear the name input field when subject changes
-    document.getElementById("nameInput").value = "";
 });
 
-document.getElementById("branch").addEventListener("change", () => {
-    const downloadLink = document.getElementById("downloadLink");
-    downloadLink.style.display = "none";
-
-    // Clear the name input field when branch changes
-    document.getElementById("nameInput").value = "";
-
-    // Clear the subjects dropdown when branch changes
-    document.getElementById("subjects").selectedIndex = 0;
-});
