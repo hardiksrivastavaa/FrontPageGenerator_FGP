@@ -5,7 +5,6 @@ body {
     height: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .background-video {
@@ -22,7 +21,7 @@ body {
 
 .main-container {
     height: 100vh;
-    width: 100%;
+    max-width: 100%;
     margin: 10px;
 }
 
@@ -110,6 +109,10 @@ button {
     margin-top: 20px;
 }
 
+button:hover {
+    font-size: 26px;
+}
+
 #downloadLink {
     display: inline-block;
     margin-top: 20px;
@@ -121,6 +124,10 @@ button {
     text-decoration: none;
     border-radius: 5px;
     align-self: center;
+}
+
+#downloadLink:hover {
+    font-size: 26px;
 }
 
 p {
@@ -137,4 +144,8 @@ i {
     margin: 5px;
     text-decoration: none;
     border: none;
+}
+
+i:hover {
+    font-size: 35px;
 }
