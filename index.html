@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="refresh" content="30" />
     <meta name="author" content="Hardik Srivastava" />
     <meta name="description"
         content="A Simple Front Page Generator which generates front pages based on the selection of branch & subjects, takes input name by student, and provides a link to download the front page." />
     <meta name="keywords"
         content="Front Page Generator, branch selection, subject selection, student name input, download front page, generate front pages, academic front page generator, Feroze Gandhi Polytechnic, Computer Science and Engineering, Information Technology, FGP" />
 
-    <title>Front Page Generator</title>
+    <title>Front Page Generator - FGP</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="fgp.jpg" type="image/x-icon" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -27,27 +26,53 @@
     <div class="main-container">
         <div class="container">
             <h1>Front Page Generator</h1>
-
-            <h2>
-                Feroze Gandhi Polytechnic <br />
-                2nd Year - 4th Semester
-            </h2>
+            <h2>Feroze Gandhi Polytechnic Raebareli</h2>
 
             <select name="branch" id="branch">
                 <option value="select">Select Branch</option>
-                <option value="CS">Computer Science & Engineering</option>
+                <option value="ME">Mechanical Engineering</option>
+                <option value="EE">Electronics Engineering</option>
+                <option value="CSE">Computer Science & Engineering</option>
                 <option value="IT">Information Technology</option>
+                <option value="IC">Instrumentation & Control</option>
+                <option value="MOM">
+                    Modern Office Management and Secretarial Practice
+                </option>
+                <option value="PGDCA">
+                    Post Graduate Diploma in Computer Application
+                </option>
+            </select>
+
+            <select name="session" id="session">
+                <option value="select">Select Session</option>
+                <option value="2022-23">2022-23</option>
+                <option value="2023-24">2023-24</option>
+                <option value="2024-25">2024-25</option>
+                <option value="2025-26">2025-26</option>
+                <option value="2026-27">2026-27</option>
+                <option value="2027-28">2027-28</option>
+                <option value="2028-29">2028-29</option>
+                <option value="2029-30">2029-30</option>
+            </select>
+
+            <select name="yearSem" id="yearSem">
+                <option value="select">Select Year - Semester</option>
+                <option value="1st - 1st">Ist Year - 1st Semester</option>
+                <option value="1st - 2nd">Ist Year - 2nd Semester</option>
+                <option value="2nd - 3rd">IInd Year - 3rd Semester</option>
+                <option value="2nd - 4th">IInd Year - 4th Semester</option>
+                <option value="3rd - 5th">IIIrd Year - 5th Semester</option>
+                <option value="3rd - 6th">IIIrd Year - 6th Semester</option>
             </select>
 
             <select name="subjects" id="subjects">
                 <option value="select">Select Subject</option>
-                <option value="OS">Operating System</option>
-                <option value="ECDM">E - Commerce and Digital Marketing</option>
-                <option value="DBMS">Database Management System</option>
-                <option value="UHV">Universal Human Values</option>
-                <option value="OOP Using Java">OOP Using Java</option>
-                <option value="CS II">Communication Skill - II</option>
-                <option value="All In One">All in One</option>
+                <!-- Options will be dynamically populated based on branch selection -->
+            </select>
+
+            <select name="subjectTeacher" id="subjectTeacher">
+                <option value="select">Select Teacher Name</option>
+                <!-- Options will be dynamically populated based on branch selection -->
             </select>
 
             <input type="text" id="nameInput" placeholder="Enter Your Name" />
@@ -77,11 +102,20 @@
                         <i class="fa-brands fa-x-twitter" style="color: black"></i>
                     </a>
                 </div>
+
+                <p>If you're a CS/IT 2nd Year student<br> Join my Telegram Channel for Academic Support<br /><a
+                        href="https://t.me/+ZxZHKNu8nu9iNWM1" class="social-link"><i
+                            class="fa-brands fa-telegram"></i></a></p>
+
             </footer>
+
+            <p>&copy; Hardik Srivatava 2024</p>
         </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf-lib/1.17.1/pdf-lib.min.js"></script>
+    <script src="subjects.js"></script>
+    <script src="teachers.js"></script>
     <script src="script.js"></script>
 </body>
 
