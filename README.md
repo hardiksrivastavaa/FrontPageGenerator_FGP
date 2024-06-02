@@ -1,10 +1,14 @@
 # Front Page Generator
 
-The Front Page Generator is a user-friendly web application designed to simplify the process of generating front pages for academic documents. It caters specifically to students at Feroze Gandhi Polytechnic, offering a streamlined solution for creating personalized front pages for their academic submissions.
+## Overview
+
+Welcome to the Front Page Generator! This project aims to provide a user-friendly web application designed to simplify the process of generating front pages for academic documents. Whether you're a student studying Mechanical Engineering, Electrical Engineering, Computer Science, or any other discipline at Feroze Gandhi Polytechnic, this tool is for you.
+
+This project is beneficial for every student studying at Feroze Gandhi Polytechnic, offering a streamlined solution for creating personalized front pages for academic submissions.
 
 ## Key Features
 
-- **Branch and Subject Selection:** Users can easily select their branch (Computer Science & Engineering or Information Technology) and the relevant subject for which they need to generate the front page.
+- **Branch and Subject Selection:** Users can easily select their branch and the relevant subject for which they need to generate the front page.
 
 - **Customizable Front Pages:** The application allows students to input their name, which will be dynamically incorporated into the generated front page, adding a personalized touch to their academic documents.
 
@@ -14,7 +18,7 @@ The Front Page Generator is a user-friendly web application designed to simplify
 
 ## How to Use
 
-1. **Select Branch and Subject:** Start by selecting your branch (Computer Science & Engineering or Information Technology) and the relevant subject for which you need to generate the front page.
+1. **Select Branch and Subject:** Start by selecting your branch and the relevant subject for which you need to generate the front page.
 
 2. **Enter Your Name:** Input your name in the provided text field.
 
@@ -38,3 +42,9 @@ The Front Page Generator was developed with ❤️ by [Hardik Srivastava](https:
 ## Demo
 
 Explore the live demo of the Front Page Generator [here](https://hardik-techie.github.io/Front-Page-Generator/). Try it out to see how easily you can generate personalized front pages for your academic submissions!
+
+## Contact
+
+For any inquiries or support, please contact hardikfgp@gmail.com.
+
+**Note:** This project is for educational purposes only. It is not intended for commercial use.
