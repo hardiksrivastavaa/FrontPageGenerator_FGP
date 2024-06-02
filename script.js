@@ -148,7 +148,11 @@ async function generateFrontPage() {
         branchX = 30;
         branchY = 265;
         branchFont = 26;
-    } else if (branch.length > 26) {
+    } else if (branch.length > 23) {
+        branchX = 150;
+        branchY = 265;
+        branchFont = 28;
+    } else if (branch.length > 27) {
         branchX = 115;
         branchY = 265;
         branchFont = 28;
