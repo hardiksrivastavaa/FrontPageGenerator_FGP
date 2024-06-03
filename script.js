@@ -7,8 +7,7 @@ function populateSubjects() {
     // Check if branch and yearSem are valid
     if (!(branch in subjectsData) || !(yearSem in subjectsData[branch])) {
         // Clear subjects dropdown if no data found
-        subjectsDropdown.innerHTML =
-            '<option value="select">Select Subject</option>';
+        subjectsDropdown.innerHTML = '<option value="select">Select Subject</option>';
         return;
     }
 
@@ -34,8 +33,7 @@ function populateTeachers() {
     // Check if branch is valid
     if (!(branch in teachersData)) {
         // Clear teacher dropdown if no data found
-        teacherDropdown.innerHTML =
-            '<option value="select">Select Teacher Name</option>';
+        teacherDropdown.innerHTML = '<option value="select">Select Teacher Name</option>';
         return;
     }
 
@@ -43,8 +41,7 @@ function populateTeachers() {
     const teachers = teachersData[branch];
 
     // Clear previous options
-    teacherDropdown.innerHTML =
-        '<option value="select">Select Teacher Name</option>';
+    teacherDropdown.innerHTML = '<option value="select">Select Teacher Name</option>';
 
     // Add new options
     teachers.forEach((teacher) => {
@@ -100,38 +97,34 @@ async function generateFrontPage() {
         alert("Please select a subject");
         return;
     }
-    const subject =
-        subjectElement.options[subjectElement.selectedIndex].innerText;
+    const subject = subjectElement.options[subjectElement.selectedIndex].innerText;
 
     const teacherElement = document.getElementById("subjectTeacher");
     if (teacherElement.value === "select") {
         alert("Please select a teacher");
         return;
     }
-    const teacher =
-        teacherElement.options[teacherElement.selectedIndex].innerText;
+    const teacher = teacherElement.options[teacherElement.selectedIndex].innerText;
 
     const sessionElement = document.getElementById("session");
     if (sessionElement.value === "select") {
         alert("Please select a session");
         return;
     }
-    const session =
-        sessionElement.options[sessionElement.selectedIndex].innerText;
+    const session = sessionElement.options[sessionElement.selectedIndex].innerText;
 
     const yearSemElement = document.getElementById("yearSem");
     if (yearSemElement.value === "select") {
         alert("Please select a year-semester");
         return;
     }
-    const yearSem =
-        yearSemElement.options[yearSemElement.selectedIndex].innerText;
+    const yearSem = yearSemElement.options[yearSemElement.selectedIndex].innerText;
 
     let nameX = 437;
     let nameY = 70;
     let branchX = 160;
     let branchY = 265;
-    let subjectX = 150;
+    let subjectX = 190;
     let subjectY = 340;
     let subjectFont = 36;
     let branchFont = 30;
@@ -143,54 +136,97 @@ async function generateFrontPage() {
         nameX = 405;
         nameY = 70;
     }
+    
 
-    if (branch.length > 30) {
+    if (branch.length > 32) {
         branchX = 30;
         branchY = 265;
         branchFont = 26;
-    } else if (branch.length > 23) {
+    } else if (branch.length == 30) {
+        branchX = 110;
+        branchY = 265;
+        branchFont = 28;
+    } else if (branch.length > 24) {
         branchX = 150;
         branchY = 265;
         branchFont = 28;
-    } else if (branch.length > 27) {
-        branchX = 115;
-        branchY = 265;
-        branchFont = 28;
     }
-
+    
     if (subject.length > 55) {
         subjectX = 20;
         subjectY = 340;
         subjectFont = 21;
     } else if (subject.length > 50) {
-        subjectX = 20;
+        subjectX = 21;
         subjectY = 340;
         subjectFont = 22;
     } else if (subject.length > 45) {
-        subjectX = 28;
+        subjectX = 39;
         subjectY = 340;
         subjectFont = 24;
     } else if (subject.length > 40) {
-        subjectX = 39;
+        subjectX = 40;
+        subjectY = 340;
+        subjectFont = 25.5;
+    } 
+    else if (subject.length > 35) {
+        subjectX = 57;
         subjectY = 340;
         subjectFont = 26;
-    } else if (subject.length > 35) {
-        subjectX = 46;
+    } 
+    else if (subject == "Utilization of Electrical Energy" || subject == "Electronic Devices and Circuits" || subject == "Basics of Information Technology") {
+        subjectX = 112; 
         subjectY = 340;
         subjectFont = 28;
-    } else if (subject.length > 30) {
-        subjectX = 75;
+    }
+    else if (subject.length > 30) {
+        subjectX = 78;
         subjectY = 340;
-        subjectFont = 29;
-    } else if (subject.length > 25) {
-        subjectX = 92;
+        subjectFont = 28;
+    } 
+
+    else if (subject == "Concept of Programming Using C") {
+        subjectX = 75; 
         subjectY = 340;
-        subjectFont = 31;
-    } else if (subject.length > 20) {
-        subjectX = 110;
+        subjectFont = 30;
+    }
+
+    else if (subject.length > 25) {
+        subjectX = 93;
+        subjectY = 340;
+        subjectFont = 30;
+    }
+
+    else if (subject.length > 20) {
+        subjectX = 130;
+        subjectY = 340;
+        subjectFont = 33;
+    }
+
+    else if (subject == "Software Engineering" || subject == "DotNet Technologies") {
+        subjectX = 158; 
         subjectY = 340;
         subjectFont = 34;
     }
+
+    else if (subject.length > 15) {
+        subjectX = 165;
+        subjectY = 340;
+        subjectFont = 35;
+    }
+
+    else if (subject == "Neural Networks") {
+        subjectX = 160; 
+        subjectY = 340;
+        subjectFont = 38;
+    }
+
+    else if (subject == "Big Data" || subject == "Robotics") {
+        subjectX = 220; 
+        subjectY = 340;
+        subjectFont = 38;
+    }
+    
 
     let pdfDoc;
     const url = "format.pdf";
@@ -204,61 +240,17 @@ async function generateFrontPage() {
     }
 
     const pages = pdfDoc.getPages();
-    const timesRomanFont = await pdfDoc.embedFont(
-        PDFLib.StandardFonts.TimesRoman
-    );
-    const timesRomanBoldFont = await pdfDoc.embedFont(
-        PDFLib.StandardFonts.TimesRomanBold
-    );
+    const timesRomanFont = await pdfDoc.embedFont(PDFLib.StandardFonts.TimesRoman);
+    const timesRomanBoldFont = await pdfDoc.embedFont(PDFLib.StandardFonts.TimesRomanBold);
 
     // Draw the name and other details on the PDF
     for (const page of pages) {
-        await drawText(
-            page,
-            `${name}`,
-            nameX,
-            nameY,
-            23,
-            [0, 0, 0],
-            timesRomanFont
-        );
-        await drawText(page, `${teacher}`, 30, 70, 23, [0, 0, 0], timesRomanFont);
-        await drawText(
-            page,
-            `${branch}`,
-            branchX,
-            branchY,
-            branchFont,
-            [255, 0, 0],
-            timesRomanFont
-        );
-        await drawText(
-            page,
-            `${yearSem}`,
-            181,
-            238,
-            24,
-            [255, 0, 0],
-            timesRomanFont
-        );
-        await drawText(
-            page,
-            `Session - ${session}`,
-            206,
-            405,
-            26,
-            [0, 0, 0],
-            timesRomanFont
-        );
-        await drawText(
-            page,
-            `${subject}`,
-            subjectX,
-            subjectY,
-            subjectFont,
-            [61, 104, 180],
-            timesRomanBoldFont
-        );
+        await drawText(page, `${name}`, nameX, nameY, 23, [0, 0, 0], timesRomanFont);
+        await drawText(page, `${teacher}`, 31, 70, 23, [0, 0, 0], timesRomanFont);
+        await drawText(page, `${branch}`, branchX, branchY, branchFont, [255, 0, 0], timesRomanFont);
+        await drawText(page, `${yearSem}`, 181, 237, 24, [255, 0, 0], timesRomanFont);
+        await drawText(page, `Session - ${session}`, 206, 405, 26, [0, 0, 0], timesRomanFont);
+        await drawText(page, `${subject}`, subjectX, subjectY, subjectFont, [61, 104, 180], timesRomanBoldFont);
     }
 
     // Save the modified PDF
