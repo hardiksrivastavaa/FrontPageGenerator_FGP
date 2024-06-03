@@ -3,7 +3,7 @@ const teachersData = {
 
     ME: [
         "Mr. P.C. Katiyar",
-        "Mr. Ravindera Solanki",
+        "Mr. Ravindra Solanki",
         "Mr. Avneesh Verma",
         "Mr. Ashish Kumar",
         "Mr. Ratnesh Sonkar",
@@ -16,7 +16,7 @@ const teachersData = {
         "Ms. Shweta Verma",
         "Dr. Anjali Trivedi",
         "Mr. Mridul Pandey",
-        "Sandeep Singh",
+        "Mr. Sandeep Singh",
         "Ms. Saumya Mishra",
         "Mr. Ganesh Mishra",
         "Mr. Anoop Shukla",
@@ -66,7 +66,7 @@ const teachersData = {
         "Mr. Mannu Kumar",
         "Mr. Anoop",
         "Mr. Zaid Ansari",
-        "Ganesh Mishra",
+        "Mr. Ganesh Mishra",
     ],
 
     MOM: ["Mr. C.S. Saroj"],
