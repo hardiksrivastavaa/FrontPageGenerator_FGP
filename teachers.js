@@ -9,6 +9,7 @@ const teachersData = {
         "Mr. Ratnesh Sonkar",
         "Mr. Ram Chandra Verma",
         "Dr. Anjali Trivedi",
+        "Mr. Mridul Pandey",
     ],
 
     EE: [
