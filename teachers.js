@@ -3,6 +3,7 @@ const teachersData = {
 
     ME: [
         "Mr. P.C. Katiyar",
+        "Mr. Sarvesh Kannaujia",
         "Mr. Ravindra Solanki",
         "Mr. Avneesh Verma",
         "Mr. Ashish Kumar",
