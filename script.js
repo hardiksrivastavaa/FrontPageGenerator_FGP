@@ -1,4 +1,5 @@
 // Function to populate subjects dropdown based on selected branch and yearSem
+
 function populateSubjects() {
     const branch = document.getElementById("branch").value;
     const yearSem = document.getElementById("yearSem").value;
@@ -85,6 +86,8 @@ async function generateFrontPage() {
         return;
     }
 
+    const enrollment = document.getElementById("enrollmentInput").value;
+
     const branchElement = document.getElementById("branch");
     if (branchElement.value === "select") {
         alert("Please select a branch");
@@ -128,13 +131,24 @@ async function generateFrontPage() {
     let subjectY = 340;
     let subjectFont = 36;
     let branchFont = 30;
+    let enrollmentX = 390; 
+    let enrollmentY = 40;
 
     if (name.length >= 15) {
         nameX = 383;
         nameY = 70;
+        enrollmentX = 390; 
+        enrollmentY = 40;    
+    } else if (name.length > 11) {
+        nameX = 398;
+        nameY = 70;
+        enrollmentX = 388; 
+        enrollmentY = 40;    
     } else if (name.length >= 8) {
         nameX = 405;
         nameY = 70;
+        enrollmentX = 386; 
+        enrollmentY = 40;    
     }
     
 
@@ -245,6 +259,7 @@ async function generateFrontPage() {
 
     // Draw the name and other details on the PDF
     for (const page of pages) {
+        await drawText(page, `${enrollment}`, enrollmentX, enrollmentY, 21, [0, 0, 0], timesRomanFont);
         await drawText(page, `${name}`, nameX, nameY, 23, [0, 0, 0], timesRomanFont);
         await drawText(page, `${teacher}`, 31, 70, 23, [0, 0, 0], timesRomanFont);
         await drawText(page, `${branch}`, branchX, branchY, branchFont, [255, 0, 0], timesRomanFont);
