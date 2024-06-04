@@ -10,6 +10,7 @@ const teachersData = {
         "Mr. Ram Chandra Verma",
         "Dr. Anjali Trivedi",
         "Mr. Mridul Pandey",
+        "Mr. Shubham Sahu",
     ],
 
     EE: [
@@ -22,6 +23,7 @@ const teachersData = {
         "Mr. Ganesh Mishra",
         "Mr. Anoop Shukla",
         "Mr. Virendra Yadav",
+        "Mr. Shubham Sahu",
     ],
 
     CSE: [
