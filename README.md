@@ -2,7 +2,7 @@
 
 ## Overview
 
-Hey there! 👋 Welcome to my Front Page Generator! If you're tired of spending precious time formatting front pages for your academic submissions, you've come to the right place. This tool is designed to simplify the process and make your academic life a little bit easier.
+Hey there! Welcome to my Front Page Generator! If you're tired of spending precious time formatting front pages for your academic practical files, you've come to the right place. This tool is designed to simplify the process and make your academic life a little bit easier.
 
 No matter which department you're in or what your major is here at Feroze Gandhi Polytechnic, this tool is tailored to meet your needs. It's intuitive, user-friendly, and most importantly, it gets the job done efficiently.
 
