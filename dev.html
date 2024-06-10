@@ -41,7 +41,7 @@
         <!-- Feedback Form -->
         <div class="mt-12 bg-gray-200 rounded-lg shadow-md p-8">
             <h2 class="text-2xl font-semibold mb-4 text-gray-800 text-center">Submit Your Feedback</h2>
-            <form id="feedbackForm" action="#" class="space-y-4">
+            <form id="feedbackForm" action="" name="feedbackForm" class="space-y-4">
                 <div class="flex flex-col">
                     <label for="name" class="text-lg text-gray-800 mb-2">Your Name:</label>
                     <input type="text" id="name" name="name"
@@ -57,8 +57,7 @@
                     <textarea id="message" name="message" rows="4"
                         class="border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-500"></textarea>
                 </div>
-                <button type="button" onclick="submitForm()"
-                    class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Submit</button>
+                <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600">Submit</button>
             </form>
             <p id="confirmationMessage" class="hidden text-green-600 font-semibold mt-4 text-center">Thank you for your
                 feedback!</p>
@@ -73,25 +72,25 @@
         </div>
     </div>
 
-    <script>
-        function submitForm() {
-            // Check if all input fields are filled
-            var name = document.getElementById("name").value;
-            var email = document.getElementById("email").value;
-            var message = document.getElementById("message").value;
+	<script>
+		const scriptURL = 'https://script.google.com/macros/s/AKfycbwTjOig6S_11GS1_zcL0sMwuzxOBIlYgelsyd6vFgxIz3-e1SYctm75mk-DYwpKIQA_Xg/exec';
+		const form = document.forms['feedbackForm'];
 
-            if (name && email && message) {
-                // Display confirmation message
-                var confirmationMessage = document.getElementById("confirmationMessage");
-                confirmationMessage.classList.remove("hidden");
+		form.addEventListener('submit', e => {
+			e.preventDefault();
+			fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+				.then(response => {
+					document.getElementById("confirmationMessage").classList.remove("hidden");
+                    document.getElementById("feedbackForm").reset();
+					setTimeout(() => {
+						document.getElementById("confirmationMessage").classList.add("hidden");
+					}, 5000); // 3 seconds delay
+				})
+				.catch(error => console.error('Error!', error.message));
+		});
+	</script>
 
-                // Clear form fields
-                document.getElementById("feedbackForm").reset();
-            } else {
-                alert("Please fill in all fields.");
-            }
-        }
-    </script>
+
 </body>
 
 </html>
