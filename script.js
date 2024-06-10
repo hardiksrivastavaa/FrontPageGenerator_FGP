@@ -34,7 +34,7 @@ function populateTeachers() {
     // Check if branch is valid
     if (!(branch in teachersData)) {
         // Clear teacher dropdown if no data found
-        teacherDropdown.innerHTML = '<option value="select">Select Teacher Name</option>';
+        teacherDropdown.innerHTML = '<option value="select">Select Teacher</option>';
         return;
     }
 
@@ -42,7 +42,7 @@ function populateTeachers() {
     const teachers = teachersData[branch];
 
     // Clear previous options
-    teacherDropdown.innerHTML = '<option value="select">Select Teacher Name</option>';
+    teacherDropdown.innerHTML = '<option value="select">Select Teacher</option>';
 
     // Add new options
     teachers.forEach((teacher) => {
@@ -80,13 +80,6 @@ const drawText = async (page, text, x, y, size, color, font) => {
 
 // Function to generate front page PDF
 async function generateFrontPage() {
-    const name = document.getElementById("nameInput").value;
-    if (name === "") {
-        alert("Please enter your name first");
-        return;
-    }
-
-    const enrollment = document.getElementById("enrollmentInput").value;
 
     const branchElement = document.getElementById("branch");
     if (branchElement.value === "select") {
@@ -94,20 +87,6 @@ async function generateFrontPage() {
         return;
     }
     const branch = branchElement.options[branchElement.selectedIndex].innerText;
-
-    const subjectElement = document.getElementById("subjects");
-    if (subjectElement.value === "select") {
-        alert("Please select a subject");
-        return;
-    }
-    const subject = subjectElement.options[subjectElement.selectedIndex].innerText;
-
-    const teacherElement = document.getElementById("subjectTeacher");
-    if (teacherElement.value === "select") {
-        alert("Please select a teacher");
-        return;
-    }
-    const teacher = teacherElement.options[teacherElement.selectedIndex].innerText;
 
     const sessionElement = document.getElementById("session");
     if (sessionElement.value === "select") {
@@ -123,6 +102,29 @@ async function generateFrontPage() {
     }
     const yearSem = yearSemElement.options[yearSemElement.selectedIndex].innerText;
 
+    const teacherElement = document.getElementById("subjectTeacher");
+    if (teacherElement.value === "select") {
+        alert("Please select a teacher");
+        return;
+    }
+    const teacher = teacherElement.options[teacherElement.selectedIndex].innerText;
+
+    const subjectElement = document.getElementById("subjects");
+    if (subjectElement.value === "select") {
+        alert("Please select a subject");
+        return;
+    }
+    const subject = subjectElement.options[subjectElement.selectedIndex].innerText;
+
+    const name = document.getElementById("nameInput").value;
+    if (name === "") {
+        alert("Please enter your name first");
+        return;
+    }
+
+    const enrollment = document.getElementById("enrollmentInput").value;
+
+    
     let nameX = 437;
     let nameY = 70;
     let branchX = 160;
