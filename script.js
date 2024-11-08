@@ -196,7 +196,7 @@ async function generateFrontPage() {
         subjectFont = 28;
     }
     else if (subject.length > 30) {
-        subjectX = 78;
+        subjectX = 80;
         subjectY = 340;
         subjectFont = 28;
     } 
