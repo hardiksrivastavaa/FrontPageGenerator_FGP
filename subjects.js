@@ -4,12 +4,12 @@ const subjectsData = {
   ME: {
     "1st - 1st": [
       "Communication Skills-I",
-      "Applied Mathematics-I",
-      "Applied Physics-I",
+      "Mathematics - I",
+      "Applied Physics - I",
       "Applied Chemistry",
-      "Engineering Drawing-I",
+      "Engineering Graphics",
       "Basics of Information Technology",
-      "General Workshop Practice-I",
+      "Communication Skills in English"
     ],
     "1st - 2nd": [
       "Applied Mathematics-II",
@@ -57,12 +57,12 @@ const subjectsData = {
   EE: {
     "1st - 1st": [
       "Communication Skills-I",
-      "Applied Mathematics-I",
-      "Applied Physics-I",
+      "Mathematics - I",
+      "Applied Physics - I",
       "Applied Chemistry",
-      "Engineering Drawing-I",
+      "Engineering Graphics",
       "Basics of Information Technology",
-      "General Workshop Practice-I",
+      "Communication Skills in English"
     ],
     "1st - 2nd": [
       "Applied Mathematics-II",
@@ -109,12 +109,13 @@ const subjectsData = {
 
   CSE: {
     "1st - 1st": [
-      "Communication Skill-I",
-      "Applied Mathematics-I",
-      "Applied Physics-I",
+      "Communication Skills-I",
+      "Mathematics - I",
+      "Applied Physics - I",
       "Applied Chemistry",
-      "Fundamentals of Computer and Information Technology",
-      "Technical Drawing",
+      "Engineering Graphics",
+      "Basics of Information Technology",
+      "Communication Skills in English"
     ],
     "1st - 2nd": [
       "Applied Mathematics-II",
@@ -160,12 +161,13 @@ const subjectsData = {
 
   IT: {
     "1st - 1st": [
-      "Communication Skill-I",
-      "Applied Mathematics-I",
-      "Applied Physics-I",
+      "Communication Skills-I",
+      "Mathematics - I",
+      "Applied Physics - I",
       "Applied Chemistry",
-      "Fundamentals of Computer and Information Technology",
-      "Technical Drawing",
+      "Engineering Graphics",
+      "Basics of Information Technology",
+      "Communication Skills in English"
     ],
     "1st - 2nd": [
       "Applied Mathematics-II",
@@ -213,13 +215,12 @@ const subjectsData = {
   IC: {
     "1st - 1st": [
       "Communication Skills-I",
-      "Applied Mathematics-I",
-      "Applied Physics-I",
+      "Mathematics - I",
+      "Applied Physics - I",
       "Applied Chemistry",
-      "Engineering Drawing-I",
-      "Engineering Mechanics and Materials",
+      "Engineering Graphics",
       "Basics of Information Technology",
-      "General Workshop Practice-I",
+      "Communication Skills in English"
     ],
     "1st - 2nd": [
       "Applied Mathematics-II",
