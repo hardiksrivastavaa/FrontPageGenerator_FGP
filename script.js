@@ -78,7 +78,7 @@ async function generateFrontPage() {
   const yPositions = {
     branchY: 265,
     subjectY: 340,
-    yearSemY: 237,
+    yearSemY: 236,
     sessionY: 405,
     teacherY: 70,
     nameY: 70,
