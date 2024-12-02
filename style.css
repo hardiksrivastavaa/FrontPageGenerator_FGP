@@ -4,6 +4,11 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+
 
 .bg-page {
     background: linear-gradient(to right, #4f46e5, #9333ea, #ec4899);
