@@ -15,7 +15,7 @@
 
 <body class="bg-page flex items-center justify-center min-h-screen p-3 transition-colors duration-300">
     <div class="max-w-4xl w-full">
-        <form id="frontPageFrom" method="POST" class="bg-white p-8 rounded-xl shadow-2xl">
+        <form id="FPGFrom" name="FPGForm" action="" class="bg-white p-8 rounded-xl shadow-2xl">
             <h1 class="text-2xl font-extrabold mb-3 mt-2 text-center text-blue-800">
                 Front Page Generator
             </h1><hr>
@@ -131,30 +131,19 @@
     <script>
 const scriptURL = "https://script.google.com/macros/s/AKfycbyHRiljcu4-FxdocpUJJS-jZN0x4wv_LN_RQqZywSmB_P3cA-DxOlFOjw3ADKqJfXY5/exec";
 
-const form = document.getElementById("frontPageFrom");
+const form = document.forms["FPGForm"];
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries()); // Convert FormData to JSON
-
-  fetch(scriptURL, {
-    method: "POST",
-    body: JSON.stringify(data),
-    headers: {
-      "Content-Type": "application/json"
-    }
-  })
-    .then((response) => response.json())
-    .then((result) => {
-      if (result.status === "success") {
-        form.reset(); // Clear the form on success
-      }
-    })
-    .catch((error) => console.error("Error!", error));
-});
-
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            fetch(scriptURL, { method: "POST", body: new FormData(form) })
+                .then((response) =>
+                    console.log("Thank you! your form is submitted successfully.")
+                )
+                .then(() => {
+                    console.log("Thank you! your form is submitted successfully.")
+                })
+                .catch((error) => console.error("Error!", error.message));
+        });	
 </script>
 
 
