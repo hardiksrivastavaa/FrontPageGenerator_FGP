@@ -128,25 +128,6 @@
     <script src="teachers.js"></script>
     <script src="script.js"></script>
 
-    <script>
-const scriptURL = "https://script.google.com/macros/s/AKfycbyHRiljcu4-FxdocpUJJS-jZN0x4wv_LN_RQqZywSmB_P3cA-DxOlFOjw3ADKqJfXY5/exec";
-
-const form = document.forms["FPGForm"];
-
-        form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            fetch(scriptURL, { method: "POST", body: new FormData(form) })
-                .then((response) =>
-                    console.log("Thank you! your form is submitted successfully.")
-                )
-                .then(() => {
-                    console.log("Thank you! your form is submitted successfully.")
-                })
-                .catch((error) => console.error("Error!", error.message));
-        });	
-</script>
-
-
 </body>
 
 </html>
