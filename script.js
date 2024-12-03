@@ -243,4 +243,7 @@ document.getElementById("yearSem").addEventListener("change", populateSubjects);
 
 document
   .getElementById("generateBtn")
-  .addEventListener("click", generateFrontPage);
+  .addEventListener("click", (event) => {
+    event.preventDefault(); // Prevent form submission
+    generateFrontPage(); // Call the function to generate the PDF
+  });
