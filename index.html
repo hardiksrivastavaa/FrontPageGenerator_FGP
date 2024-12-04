@@ -15,7 +15,7 @@
 
 <body class="bg-page flex items-center justify-center min-h-screen p-3 transition-colors duration-300">
     <div class="max-w-4xl w-full">
-        <form id="form" name="formName" class="bg-white p-8 rounded-xl shadow-2xl">
+        <form id="form" class="bg-white p-8 rounded-xl shadow-2xl">
             <h1 class="text-2xl font-extrabold mb-3 mt-2 text-center text-blue-800">
                 Front Page Generator
             </h1><hr>
@@ -127,19 +127,6 @@
     <script src="subjects.js"></script>
     <script src="teachers.js"></script>
     <script src="script.js"></script>
-
-    <script>
-			const scriptURL = 'https://script.google.com/macros/s/AKfycbzQaqPyfpex4yQDzyQzDCzrLHCdL47X1yIVYyRL2wO7r3wrdPZGedcBLAXWF8FzZkkp/exec';
-			const form = document.forms['formName']
-		  
-			form.addEventListener('submit', e => {
-			  e.preventDefault()
-			  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-				.then(response => alert("Thank you! your form is submitted successfully." ))
-				.then(() => {  window.location.reload(); })
-				.catch(error => console.error('Error!', error.message))
-			})
-    </script>
 
 </body>
 
