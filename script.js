@@ -193,7 +193,8 @@ async function generateFrontPage() {
       getCenteredX(subject, subjectFontSize, timesRomanBoldFont, pageWidth),
       yPositions.subjectY,
       subjectFontSize,
-      [61, 104, 180],
+      [68, 114, 196],
+            // [61, 104, 180],
       timesRomanBoldFont
     );
   }
