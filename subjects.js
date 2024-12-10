@@ -254,6 +254,7 @@ const subjectsData = {
     ],
     "3rd - 5th": [
       "Industrial Management & Entrepreneurship Development",
+"Minor Project",
       "Microprocessor & Peripheral Devices",
       "Industrial Control",
       "Signal Transmission Recording and Display",
