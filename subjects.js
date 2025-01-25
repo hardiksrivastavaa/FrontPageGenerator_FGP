@@ -259,6 +259,8 @@ const subjectsData = {
       "Industrial Control",
       "Signal Transmission Recording and Display",
       "Programming in C",
+"Summer Training - Modern Rail Coach Factory",
+"Summer Training",
     ],
     "3rd - 6th": [
       "Process Control",
